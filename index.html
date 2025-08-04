@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+    rel="stylesheet"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Moedas</title>
+</head>
+
+<body>
+  <img class="logo" src="./assets/icon-my.png" alt="logo-convert" />
+
+  <main>
+    <label>
+      Converter <b>De:</b>
+      <select class="currency-select-from">
+        <option value="real">R$ Real Brasileiro</option>
+        <option value="dolar">US$ Dólar Americano</option>
+        <option value="euro">€ Euro</option>
+        <option value="libra">£ Libra esterlina</option>
+        <option value="bitcoin">₿ Bitcoin</option>
+        <option value="iene">¥ Iene</option>
+        <option value="dolarAus">AU$ Dólar Australiano</option>
+        <option value="franco">Fr Franco Suíço</option>
+        <option value="dolarCa">C$ Dólar Canadense</option>
+        <option value="renminbi">¥ Renminbi (Yuan)</option>
+        <option value="peso">M$ Peso Argentino</option>
+        <option value="lira">₺ Lira Turca</option>
+      </select>
+    </label>
+
+    <label>
+      Converter <b>Para:</b>
+      <select class="currency-select">
+        <option value="real">R$ Real Brasileiro</option>
+        <option value="dolar">US$ Dólar Americano</option>
+        <option value="euro">€ Euro</option>
+        <option value="libra">£ Libra esterlina</option>
+        <option value="bitcoin">₿ Bitcoin</option>
+        <option value="iene">¥ Iene</option>
+        <option value="dolarAus">AU$ Dólar Australiano</option>
+        <option value="franco">Fr Franco Suíço</option>
+        <option value="dolarCa">C$ Dólar Canadense</option>
+        <option value="renminbi">¥ Renminbi (Yuan)</option>
+        <option value="peso">M$ Peso Argentino</option>
+        <option value="lira">₺ Lira Turca</option>
+      </select>
+    </label>
+
+    <label>
+      Valor
+      <input class="input-currency" placeholder="Digite o valor" />
+    </label>
+
+    <button class="convert-button">Converter</button>
+
+    <section>
+      <!-- Moeda de origem -->
+      <div class="currency-box">
+        <img class="currency-img-first" src="./assets/real.png" alt="moeda-a-converter" />
+        <p class="currency">Real Brasileiro</p>
+        <p class="currency-value-to-convert">R$ 0,00</p>
+      </div>
+
+      <img class="arrow-img" src="./assets/arrow.png" alt="seta" />
+
+      <!-- Moeda convertida -->
+      <div class="currency-box">
+        <img class="currency-img" src="./assets/dolar.png" alt="moeda-convertida" />
+        <p class="currency" id="currency-name">Dólar Americano</p>
+        <p class="currency-value">US$ 0.00</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+* {
+    font-family: 'roboto', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #2c2c2c, #0a0a0a);
+    background-size: 400% 400%;
+    animation: gradientDark 12s ease infinite;
+    color: #fff;
+    display: flex;
+    /* Adicionado para centralizar o conteúdo na página */
+    flex-direction: column;
+    /* Alinha o logo e o main em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+  
+}
+
+@keyframes gradientDark {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.logo {
+    width: 300px;
+    margin: 20px auto;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+main {
+    width: 375px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0 auto 40px;
+    padding: 44px 24px 23px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    color: #777;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+    /* Garante que o label ocupe 100% da largura */
+}
+
+select,
+input {
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 24px;
+    padding-left: 18px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+button {
+    background: #00c896;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    height: 48px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #00a67d;
+    box-shadow: 0 0 20px rgb(5, 107, 82);
+}
+
+button:active {
+    opacity: 0.7;
+    color: #0a0a0a;
+}
+
+section {
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin-top: 36px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* Garante que a section ocupe a largura total do main */
+}
+
+.arrow-img {
+    margin: 15px 0;
+}
+
+.currency-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.currency {
+    color: #777;
+    font-size: 14px;
+}
+
+.currency-value,
+.currency-value-to-convert {
+    color: #555;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.currency-img,
+.currency-img-first {
+    width: 50px;
+}
+
+/* --- Media Query --- */
+@media (max-width: 450px) {
+    main {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
